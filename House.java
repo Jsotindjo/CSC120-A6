@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import javax.management.RuntimeErrorException;
 
 /* This is a stub for the House class */
 public class House extends Building {

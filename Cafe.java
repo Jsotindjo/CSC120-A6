@@ -16,6 +16,9 @@ public class Cafe extends Building {
     }
 
     public void sellCoffee(int size, int nSugarPackets, int nCreams){
+        if (this.nCoffeeOunces < size || this.nSugarPackets <nSugarPackets|| this.nCreams <nCreams){
+            restock(10,20,30,40);
+        }
         this.nCoffeeOunces -= size;
         this.nSugarPackets -= size;
         this.nCreams -= size;
@@ -24,13 +27,20 @@ public class Cafe extends Building {
     }
     
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups){
-        if( nCoffeeOunces == 0)
-        this.nCoffeeOunces += size;
+        this.nCoffeeOunces += nCoffeeOunces;
+        this.nSugarPackets += nSugarPackets;
+        this.nCreams += nCreams;
+        this.nCups += nCups;
+
     }
 
     
     public static void main(String[] args) {
-        new Cafe();
+        Cafe myCafe = new Cafe("CC Cafe", "Elm Street", 4);
+        myCafe.sellCoffee(5, 6, 3);
+
+
+        
     }
     
 }

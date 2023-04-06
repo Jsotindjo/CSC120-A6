@@ -38,21 +38,23 @@ public class Library extends Building {
     }
 
   public boolean isAvailable(String title){
-    return(this.collection.get(title));
-    }
+    return this.collection.get(title);
+  }
     
 
-    for(String title: this.collection.keyset()){
+    public void printCollection () {
+      for(String title: this.collection.keySet()){
       System.out.println(title + ("") + this.collection.get(title));
+      }
     }
 
 
 
-  }
+  
 
 
     public static void main(String[] args) {
-      Library myLibrary = new Library("Neilson","Elm Street", "4.0");
+      Library myLibrary = new Library("Neilson","Elm Street", 4);
     }
   
   }
