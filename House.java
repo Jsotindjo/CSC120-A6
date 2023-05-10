@@ -66,7 +66,6 @@ public class House extends Building {
     House morrow = new House("Morrow", "The Quad", 4, false);
     System.out.println(morrow);
     morrow.moveIn("Jordan");
-    morrow.moveIn("Jordan");
     System.out.println(morrow);
     House king = new House("King", "The Quad", 3, true);
     System.out.println(king);
